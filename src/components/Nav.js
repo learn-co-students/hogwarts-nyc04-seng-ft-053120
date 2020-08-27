@@ -1,7 +1,18 @@
 import piggy from "../porco.png";
 import React from "react";
 
-const Nav = () => {
+const Nav = (props) => {
+
+  const handleSortSelection = (evt) => {
+    props.sortHogs(evt.target.value)
+  }
+
+  const handleGreasedCheckbox = (evt) => {
+    (evt.target.checked) 
+      ? props.displayGreasedHogs()
+      : props.displayAllHogs()
+  }
+
   return (
     <div className="navWrapper">
       <span className="headerText">Hogwarts</span>
@@ -9,6 +20,34 @@ const Nav = () => {
         <img src={piggy} className="App-logo" alt="piggy" />
       </div>
       <span className="normalText">A React App for County Fair Hog Fans</span>
+      <div>
+
+        <span> 
+          <span>Sort By: </span>
+          <select onChange={ handleSortSelection }>
+            <option value="" disabled selected>Select your option</option>
+            <option value="name">Name</option>
+            <option value="weight">Weight</option>
+            <option value="all">All</option>
+          </select>
+        </span>
+
+        <span>
+          <label>
+            Greased Hogs Only 
+            <input
+              type="checkbox"
+              onChange={ handleGreasedCheckbox }
+            />
+          </label>
+        </span>
+        
+
+
+
+      </div>
+      
+
     </div>
   );
 };
