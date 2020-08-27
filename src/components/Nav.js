@@ -1,7 +1,9 @@
 import piggy from "../porco.png";
 import React from "react";
+import Filter from "./Filter";
 
 const Nav = () => {
+
   return (
     <div className="navWrapper">
       <span className="headerText">Hogwarts</span>
