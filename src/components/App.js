@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 import "../App.css";
 import Nav from "./Nav";
+//all hogs coming through here
 import hogs from "../porkers_data";
-import HelloWorld from "./HelloWorld";
+import HogContainer from "./HogContainer";
+
+
 
 class App extends Component {
+  
+
   render() {
     return (
       <div className="App">
         <Nav />
-        <HelloWorld />
+        <HogContainer hogs={hogs} />
       </div>
     );
   }
