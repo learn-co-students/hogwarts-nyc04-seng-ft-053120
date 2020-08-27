@@ -15,7 +15,7 @@ class App extends Component {
 
   // function that will sort the hogs by either name or weight
   sortHogs = (sortParam) => {
-    if (sortParam !== 'all') {
+    if (sortParam !== 'none') {
       const copyHogs = [...this.state.hogs];
 
       const sortedHogs = copyHogs.sort((a, b) => {

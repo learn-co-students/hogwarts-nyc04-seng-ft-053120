@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-const dotenv = require('dotenv').config();
+import '../HogCard.css'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 console.log(process.env.REACT_APP_API_KEY);
@@ -60,7 +60,7 @@ export class HogCard extends Component {
 
     return (
       
-      <div className='ui eight wide column'>
+      <div className='ui four wide column'>
         <div className="ui card">
           <div className="image" onClick={this.fetchPigGif}>
             <img src={ this.getImgSrc(name) } alt={ name } />
