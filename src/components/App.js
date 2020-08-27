@@ -6,6 +6,7 @@ import HogContainer from "./HogContainer";
 
 class App extends Component {
 
+
   ogHogs = hogs;
 
   state = {
@@ -41,6 +42,10 @@ class App extends Component {
     this.setState({ hogs: this.ogHogs })
   }
 
+  hideHogs = () => {
+    this.setState({ hogs: [] })
+  }
+
   render() {
 
     return (
@@ -50,6 +55,7 @@ class App extends Component {
           sortHogs={ this.sortHogs }
           displayGreasedHogs={ this.displayGreasedHogs }
           displayAllHogs= { this.displayAllHogs }
+          hideHogs={this.hideHogs}
         />
         <HogContainer hogs={ this.state.hogs }/>
       </div>

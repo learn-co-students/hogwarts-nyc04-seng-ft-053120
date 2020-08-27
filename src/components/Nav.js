@@ -13,6 +13,13 @@ const Nav = (props) => {
       : props.displayAllHogs()
   }
 
+  const handleHogDisplay = (evt) => {
+    (evt.target.checked) 
+      ? props.hideHogs()
+      : props.displayAllHogs()
+  }
+
+
   return (
     <div className="navWrapper">
       <span className="headerText">Hogwarts</span>
@@ -38,6 +45,13 @@ const Nav = (props) => {
             <input
               type="checkbox"
               onChange={ handleGreasedCheckbox }
+            />
+          </label>
+          <label>
+            Hide Hogs 
+            <input
+              type="checkbox"
+              onChange={handleHogDisplay }
             />
           </label>
         </span>

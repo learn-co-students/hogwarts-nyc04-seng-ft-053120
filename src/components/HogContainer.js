@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Component } from 'react'
 import HogCard from "./HogCard";
 
-class HogContainer extends React.Component {
+class HogContainer extends Component {
   // have access to this.props.hogs (array of hogs)
 
   renderHogs = () => {
