@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../HogCard.css'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-console.log(process.env.REACT_APP_API_KEY);
+
 const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=pig&limit=25&offset=0&rating=g&lang=en`;
 
 export class HogCard extends Component {
